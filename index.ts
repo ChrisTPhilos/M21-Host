@@ -11,7 +11,9 @@ const client = new DJS.Client({
 client.on("ready", async () => {
   // await mongoose.connect(process.env.MONGO_URI!, {
   //     keepAlive: true
-  // })
+  // }) 
+
+  //Connect with WOKCOMMANDS
 
   client.user?.setPresence({
     activities: [{ name: "m!help", type: "LISTENING" }],
