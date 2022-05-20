@@ -13,6 +13,11 @@ client.on("ready", async () => {
   //     keepAlive: true
   // })
 
+  client.user?.setPresence({
+    activities: [{ name: "m!help", type: "LISTENING" }],
+    status: "dnd",
+  });
+
   new WOK(client, {
     commandsDir: path.join(__dirname, "commands"),
     featuresDir: path.join(__dirname, "features"),
